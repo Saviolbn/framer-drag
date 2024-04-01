@@ -7,6 +7,7 @@
   width: 100%;
   height: 100%;
   border-radius:  2rem;
+  pointer-events: none;
 }
 .inner-carrousel{
   display: flex;
@@ -14,8 +15,66 @@
   border-radius: 2rem;
 }
 .carrousel{
+  margin: auto;
+  width: 40%;
+  
   cursor: grab;
   overflow: hidden;
   background-color: aquamarine;
   border-radius: 2rem;
+}
+
+.container{
+  display: flex;
+  height: 100vh;
+  background-color: bisque;
+}
+
+.slideshow{
+  margin: auto;
+  width: 60vh;
+  aspect-ratio: calc(16/9);
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+button{
+  padding: 16px;
+  font-size: 18px;
+  width: 64px;
+  aspect-ratio: 1;
+  border-radius: 32px;
+  background-color: rgb(128, 114, 98);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+
+}
+
+button:hover{
+  background-color: black;
+}
+
+.prevButton{
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+}
+.nextButton{
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+.slides{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }

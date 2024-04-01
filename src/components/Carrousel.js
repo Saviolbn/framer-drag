@@ -21,7 +21,15 @@ export const Carrousel = () => {
             >
             {images.map(image => {
                 return(
-                    <motion.div className='item' key={image}>
+                    <motion.div 
+                    // style={{backgroundColor:'blue'}}
+                    className='item' 
+                    key={image}
+                    whileHover={{scale:1.03}}
+                    // whileHover={{scale:1.1}}
+                    // onHoverStart={e =>{}}
+                    // onHoverEnd={e=>{}}
+                    >
                         <img src={image} alt=''/>
                     </motion.div>
                 )
